@@ -63,4 +63,12 @@
     background-color: #FFF;
     transform-origin: left center;
     border-radius: 999px;
+    transform: translateY(-50%)
+  }
+
+  .clock-inner .hand.second {
+    opacity: 0.5;
+    height: 3px;
+    transform: translateY(-50%) rotate(-180deg);
+    transition: 0.1s ease-out;
   }
