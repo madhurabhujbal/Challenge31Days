@@ -72,3 +72,8 @@
     transform: translateY(-50%) rotate(-180deg);
     transition: 0.1s ease-out;
   }
+
+  .clock-inner .hand.minute {
+    transform: translateY(-50%) rotate(-90deg);
+    transition: 0.4s ease-out;
+  }
