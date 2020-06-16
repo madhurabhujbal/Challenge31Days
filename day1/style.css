@@ -77,3 +77,9 @@
     transform: translateY(-50%) rotate(-90deg);
     transition: 0.4s ease-out;
   }
+
+  .clock-inner .hand.hour {
+    transform: translateY(-50%) rotate(45deg);
+    width: calc(50% - 80px);
+    transition: 0.4s ease-out;
+  }
