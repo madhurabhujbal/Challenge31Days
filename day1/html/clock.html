@@ -30,12 +30,12 @@
                 hand_min.style.transform = `translateY(-50%) rotate(${minInDegrees}deg)`;
                 //Hours
                 let hours = d.getHours();
-                const hoursInDegrees = (hours * (360 / 12)) + 90;
+                const hoursInDegrees = (hours * (360 / 12)) + (minutes * (30 / 60)) + 90;
                 hand_hr.style.transform = `translateY(-50%) rotate(${hoursInDegrees}deg)`;
             }
 
-            tick();
-            setInterval(tick, 1000);
+            //tick();
+            //setInterval(tick, 1000);
         </script>
     </body>
 </html>
