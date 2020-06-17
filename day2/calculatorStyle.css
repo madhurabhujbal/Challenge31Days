@@ -13,3 +13,20 @@
     align-items: center;
     font-family: "Roboto", sans-serif;
   }
+
+  .app {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    background: #FFF;
+    border-radius: 16px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .app:after {
+    content: "";
+    display: block;
+    padding-top: calc(100% / (3/4));
+  }
