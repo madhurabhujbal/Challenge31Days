@@ -62,10 +62,12 @@
     overflow-y: scroll;
     padding: 20px 15px;
   }
+
   .calculator main .input-group {
     display: flex;
     margin-bottom: 20px;
   }
+
   .calculator main .pre {
     display: flex;
     justify-content: center;
@@ -77,6 +79,7 @@
     background: #EEE;
     border-radius: 8px 0px 0px 0px;
   }
+
   .calculator main input {
     appearance: none;
     border: none;
@@ -89,7 +92,23 @@
     color: #212121;
     font-size: 18px;
   }
+
   .calculator main input::placeholder {
     color: #666;
     font-size: 14px;
+  }
+
+  .calculator main select {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    display: block;
+    width: 100%;
+    border-bottom: 3px solid #33CC88;
+    border-radius: 0px;
+    color: #212121;
+    font-size: 16px;
+    padding: 10px 15px;
   }
