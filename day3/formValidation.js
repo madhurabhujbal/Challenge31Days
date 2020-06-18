@@ -50,6 +50,11 @@ function validateRegisterForm(e) {
 
 //below function needs explanation
 function handle_errors(errs) {
+    // clear old errors
+    if( errors_el.hasChildNodes() ) {
+        let old_error = errors_el.lastElementChild;
+        errors_el.removeChild(old_error);
+    }
     let str = "You have error with the following fields: ";
     errs.map((er) => {
         er.el.classList.add('error');
