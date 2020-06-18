@@ -91,3 +91,31 @@
     color: #676767;
     font-size: 12px;
   }
+
+  form#register .errors {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 15px;
+    pointer-events: none;
+  }
+
+  form#register .errors .error {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(230, 20, 20, 0.8);
+    color: #FFF;
+    font-size: 14px;
+    transform: translateY(300px);
+    pointer-events: all;
+    margin-bottom: 10px;
+    animation: slide-in 1s ease-out forwards;
+  }
+
+  @keyframes slide-in {
+    to {
+      transform: translateY(0px);
+    }
+  }
