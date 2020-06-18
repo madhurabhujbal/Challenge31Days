@@ -38,13 +38,21 @@ function validateRegisterForm(e) {
     return true;
 }
 
+//below function needs explanation
 function handle_errors(errs) {
     let str = "You have error with the following fields: ";
     errs.map((er) => {
         er.el.classList.add('error');
-        str +=er.text + ", ";
+        str += er.text + ", ";
     });
 
     //Focuses only on those fields which are causing error
     errs[0].el.focus();
+
+    //Display error with error fields
+    let error_el = document.createElement('div');
+    error_el.classList.add('error');
+    error_el.innerText = str;
+
+    errors_el.appendChild(error_el);
 }
