@@ -54,5 +54,9 @@ function handle_errors(errs) {
     error_el.classList.add('error');
     error_el.innerText = str;
 
+    error_el.addEventListener('click', function() {
+        errors_el.removeChild(error_el);
+    });
+
     errors_el.appendChild(error_el);
 }
