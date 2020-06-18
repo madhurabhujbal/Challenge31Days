@@ -15,7 +15,8 @@ function validateRegisterForm(e) {
     let errors = [];
 
     const email_reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    //const pass_reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+    const password_reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
     if(firstname.value == '') {
         errors.push({text: "first name", el: firstname});
@@ -32,6 +33,8 @@ function validateRegisterForm(e) {
     }
 
     if(password.value == '') {
+        errors.push({text: "password", el: password});
+    } else if(!password_reg.test(password.value)) {
         errors.push({text: "password", el: password});
     }
 
