@@ -86,3 +86,8 @@
   form#register .input-group input.submit-btn.hover {
     background-color: #FF5858;
   }
+
+  form#register .input-group p {
+    color: #676767;
+    font-size: 12px;
+  }
