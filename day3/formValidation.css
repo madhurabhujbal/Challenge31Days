@@ -63,7 +63,7 @@
   }
 
   form#register .input-group input.error {
-    border: 1px solid #00FF00;
+    border: 1px solid #FF0000;
   }
 
   form#register .input-group input.submit-btn {
