@@ -1,5 +1,4 @@
 const form = document.querySelector('#login-form');
-const email_reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const password_reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
 let username = form.elements.namedItem('username');
@@ -26,7 +25,13 @@ function validate(e) {
         }
     }
 
-    if(target.name == username) {
-
+    if(target.name == "username") {
+        if(target.value.length >= 4) {
+            target.classList.add('valid');
+            target.classList.remove('invalid');
+        } else {
+            target.classList.add('invalid');
+            target.classList.remove('valid');
+        }
     }
 }
