@@ -64,3 +64,21 @@ body {
   .container form .form-group .input-field:invalid {
     color: #FF0000;
   }
+
+  .container form .login-btn {
+    margin: 0px 15px;
+    display: inline-block;
+    padding: 10px 40px;
+    color: #CC2B5E;
+    font-size: 20px;
+    background: none;
+    border: 2px solid #CC2B5E;
+    border-radius: 99px;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+
+  .container form .login-btn:hover {
+    color: #FFF;
+    background-color: #CC3B5E;
+  }
