@@ -15,7 +15,8 @@ function App() {
 
   const search = (e) => {
     if (e.key === "Enter") {
-      axios(apiUrl + "&s=" + state.s).then(({data}) => {
+      axios(apiUrl + "&s=" + state.s)
+      .then(({data}) => {
         let results = data.Search;
         setState(prevState => {
           return{ ...prevState, results: results }
@@ -33,6 +34,23 @@ function App() {
 
     //check text entered in search textbox is getting stored in variable s
     //console.log(state.s);
+  }
+
+  const openPopup = id => {
+    axios(apiUrl + "&i=" +id)
+    .then(({ data }) => {
+      let result = data;
+
+      setState(prevState => {
+        return{...prevState, selected: result}
+      });
+    });
+  }
+
+  const closePopup = () => {
+    setState(prevState => {
+      return{...prevState, selected: {}}
+    });
   }
 
   return (
