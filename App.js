@@ -76,7 +76,9 @@ export default function App() {
             return{...prevState, selected: {}}
           })}
         >
-          <Text style={styles.closeBtn}> Close </Text>
+          <View style={styles.popupBelow}>
+            <Text style={styles.closeBtn}> Close </Text>
+          </View>
         </TouchableHighlight>
       </Modal>
     </View>
@@ -132,8 +134,13 @@ const styles = StyleSheet.create({
   popup: {
     padding: 20,
     backgroundColor: '#223343',
-    height: 501
+    height: 500
 
+  },
+
+  popupBelow: {
+    backgroundColor: '#223343',
+    height: 90
   },
 
   poptitle: {
@@ -146,8 +153,10 @@ const styles = StyleSheet.create({
   closeBtn: {
     padding: 20,
     fontSize: 20,
+    borderRadius: 18,
     backgroundColor: '#2848C4',
     color: '#FFF',
-    fontWeight: '700'
+    fontWeight: '700',
+    textAlign: 'center'
   }
 });
