@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import { StyleSheet, Text, View, TextInput, ScrollView, Image } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView, Image, TouchableHighlight } from 'react-native';
 
 export default function App() {
   const apiUrl = "http://www.omdbapi.com/?apikey=e0a0442a";
@@ -14,11 +14,21 @@ export default function App() {
     axios(apiUrl + "&s=" + state.s)
     .then(( {data} ) => {
       let results = data.Search;
-      console.log(results);
       setState(prevState => {
         return { ...prevState, results: results}
       })
     })
+  }
+
+  const openPopup = id => {
+    axios(apiUrl + "&i=" + id)
+    .then(({ data }) => {
+      let result = data;
+      console.log(result);
+      setState(prevState => {
+        return{...prevState, selected: result}
+      });
+    });
   }
 
   return (
@@ -35,17 +45,19 @@ export default function App() {
 
       <ScrollView style={styles.results}>
         {state.results.map(result => (
-          <View key={result.imdbID} style={styles.result}>
-            <Image
-              source={{ uri: result.Poster }}
-              style={{
-                width: '100%',
-                height: 300
-              }}
-              resizeMode="cover"
-            />
-            <Text style={styles.heading}>{result.Title}</Text>
-          </View>
+          <TouchableHighlight key={result.imdbID} onPress={() => openPopup(result.imdbID)}>
+            <View style={styles.result}>
+              <Image
+                source={{ uri: result.Poster }}
+                style={{
+                  width: '100%',
+                  height: 300
+                }}
+                resizeMode="cover"
+              />
+              <Text style={styles.heading}>{result.Title}</Text>
+            </View>
+          </TouchableHighlight>
         ))}
 
       </ScrollView>
