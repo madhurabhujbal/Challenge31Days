@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView, Image } from 'react-native';
 
 export default function App() {
   const apiUrl = "http://www.omdbapi.com/?apikey=e0a0442a";
@@ -36,6 +36,14 @@ export default function App() {
       <ScrollView style={styles.results}>
         {state.results.map(result => (
           <View key={result.imdbID} style={styles.result}>
+            <Image
+              source={{ uri: result.Poster }}
+              style={{
+                width: '100%',
+                height: 300
+              }}
+              resizeMode="cover"
+            />
             <Text style={styles.heading}>{result.Title}</Text>
           </View>
         ))}
