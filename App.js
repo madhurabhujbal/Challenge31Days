@@ -70,6 +70,14 @@ export default function App() {
               <Text style={{marginBottom: 20}}> Rating: {state.selected.imdbRating} </Text>
               <Text> {state.selected.Plot} </Text>
         </View>
+
+        <TouchableHighlight
+          onPress={() => setState(prevState => {
+            return{...prevState, selected: {}}
+          })}
+        >
+          <Text style={styles.closeBtn}> Close </Text>
+        </TouchableHighlight>
       </Modal>
     </View>
   );
