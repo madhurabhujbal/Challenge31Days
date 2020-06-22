@@ -10,11 +10,26 @@ export default function App() {
     selected: {}
   });
 
+  const search = () => {
+    axios(apiUrl + "&s=" + state.s)
+    .then(( {data} ) => {
+      let results = data.Search;
+      console.log(results);
+      setState(prevState => {
+        return { ...prevState, results: results}
+      })
+    })
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}> Movie DB </Text>
       <TextInput
         style={styles.searchbox}
+        onChangeText={text => setState(prevState => {
+          return {...prevState, s:text}
+        })}
+        onSubmitEditing={search}
         value={state.s}
       />
     </View>
