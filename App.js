@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import { StyleSheet, Text, View, TextInput, ScrollView, Image, TouchableHighlight } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView, Image, TouchableHighlight, Modal } from 'react-native';
 
 export default function App() {
   const apiUrl = "http://www.omdbapi.com/?apikey=e0a0442a";
@@ -59,8 +59,18 @@ export default function App() {
             </View>
           </TouchableHighlight>
         ))}
-
       </ScrollView>
+      <Modal
+        animationType="fade"
+        transparent={false}
+        visible={(typeof state.selected.Title != "undefined")}
+      >
+        <View style={styles.popup}>
+              <Text style={styles.poptitle}>{state.selected.Title}</Text>
+              <Text style={{marginBottom: 20}}> Rating: {state.selected.imdbRating} </Text>
+              <Text> {state.selected.Plot} </Text>
+        </View>
+      </Modal>
     </View>
   );
 }
