@@ -67,8 +67,8 @@ export default function App() {
       >
         <View style={styles.popup}>
               <Text style={styles.poptitle}>{state.selected.Title}</Text>
-              <Text style={{marginBottom: 20}}> Rating: {state.selected.imdbRating} </Text>
-              <Text> {state.selected.Plot} </Text>
+              <Text style={{ color:'#FFF', marginBottom: 20}}> Rating: {state.selected.imdbRating} </Text>
+              <Text style={{color:'#FFF'}}> {state.selected.Plot} </Text>
         </View>
 
         <TouchableHighlight
@@ -127,5 +127,27 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     padding: 20,
     backgroundColor: '#445565'
+  },
+
+  popup: {
+    padding: 20,
+    backgroundColor: '#223343',
+    height: 501
+
+  },
+
+  poptitle: {
+    fontSize: 24,
+    fontWeight:'700',
+    marginBottom: 5,
+    color: '#FFF'
+  },
+
+  closeBtn: {
+    padding: 20,
+    fontSize: 20,
+    backgroundColor: '#2848C4',
+    color: '#FFF',
+    fontWeight: '700'
   }
 });
