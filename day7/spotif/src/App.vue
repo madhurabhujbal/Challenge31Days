@@ -5,7 +5,7 @@
     </header>
     <main>
       <section class="player">
-        <h2 class="song-title"> {{ current.title }} </h2>
+        <h2 class="song-title"> {{ current.title }} - <span>{{ current.artist }}</span> </h2>
       </section>
     </main>
   </div>
@@ -17,9 +17,8 @@ export default {
   name: 'App',
   data() {
     return {
-      current: {
-        title: 'SONG TITLE'
-      },
+      current: {},
+      index : 0,
       songs: [
         {
           title: 'Broke for free',
@@ -51,8 +50,16 @@ export default {
           artist: 'Neffex',
           src: require('./assets/neffex-grateful.mp3')
         },
-      ]
+      ],
+      player: new Audio()
     }
+  },
+
+//As soon as app gets created, run the following:
+  created() {
+    this.current = this.songs[this.index];
+    this.player.src = this.current.src;
+    this.player.play();
   }
 }
 </script>
