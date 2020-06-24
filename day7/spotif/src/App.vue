@@ -138,4 +138,39 @@ header {
   background-color: #212121;
   color: #FFF;
 }
+
+main {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.song-title {
+  color: #53565A;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.song-title span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
 </style>
