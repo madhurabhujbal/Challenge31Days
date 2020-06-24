@@ -8,6 +8,7 @@
         <h2 class="song-title"> {{ current.title }} - <span>{{ current.artist }}</span> </h2>
         <div class="controls">
           <button class="prev">Prev</button>
+          <!--If song is playing, display pause button; else display play button if not playing-->
           <button class="play" v-if="!isPlaying">Play</button>
           <button class="pause" v-else>Pause</button>
           <button class="next">Next</button>
