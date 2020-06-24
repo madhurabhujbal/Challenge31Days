@@ -9,8 +9,8 @@
         <div class="controls">
           <button class="prev">Prev</button>
           <!--If song is playing, display pause button; else display play button if not playing-->
-          <button class="play" v-if="!isPlaying">Play</button>
-          <button class="pause" v-else>Pause</button>
+          <button class="play" v-if="!isPlaying" @click="play">Play</button>
+          <button class="pause" v-else @click="pause">Pause</button>
           <button class="next">Next</button>
         </div>
       </section>
@@ -29,14 +29,14 @@ export default {
       isPlaying: false,
       songs: [
         {
-          title: 'Broke for free',
-          artist: 'Juparo',
-          src: require('./assets/Broke_For_Free_-_01_-_Night_Owl.mp3')
-        },
-        {
           title: 'Deaf kev invincible',
           artist: 'Holly Knight, Simon Climie',
           src: require('./assets/deaf-kev-invincible.mp3')
+        },
+        {
+          title: 'Broke for free',
+          artist: 'Juparo',
+          src: require('./assets/Broke_For_Free_-_01_-_Night_Owl.mp3')
         },
         {
           title: 'Trip to Ganymed',
@@ -60,6 +60,21 @@ export default {
         },
       ],
       player: new Audio()
+    }
+  },
+
+  methods: {
+    play(song) {
+      if(typeof song.src != "undefined") {
+        this.current = song;
+        this.player.src = this.current.src;
+      }
+      this.player.play();
+      this.isPlaying = true;
+    },
+    pause(){
+      this.player.pause();
+      this.isPlaying = false;
     }
   },
 
