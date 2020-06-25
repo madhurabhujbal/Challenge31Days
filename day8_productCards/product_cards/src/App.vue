@@ -24,19 +24,19 @@ export default {
           title: 'Nike Green Shoes',
           color: 'green',
           bgtext: 'MAX',
-          src: require('./assets/greenShoes.jpg')
+          src: require('./assets/greenShoe.png')
         },
         {
-          title: 'Nike Black Shoes',
-          color: 'black',
+          title: 'Nike Blue Shoes',
+          color: 'blue',
           bgtext: 'FLEX',
-          src: require('./assets/greyShoes.jpg')
+          src: require('./assets/blueShoe.png')
         },
         {
-          title: 'Nike Black Shoes',
-          color: 'grey, orange, blue',
+          title: 'Nike Pink Shoes',
+          color: 'pink',
           bgtext: 'LIGHT',
-          src: require('./assets/multicolorShoes.jpg')
+          src: require('./assets/pinkShoe.png')
         },
       ]
     }
@@ -52,7 +52,7 @@ export default {
 }
 
 body {
-  font-family: 'montseratt', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 main {
