@@ -1,7 +1,11 @@
 <template>
   <main id="app">
     <section class="products">
-      <Product />
+      <Product
+        v-for="product in products"
+        :key="product.color"
+        :product="product"
+      />
     </section>
   </main>
 </template>
