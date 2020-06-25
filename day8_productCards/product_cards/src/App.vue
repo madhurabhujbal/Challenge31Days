@@ -65,7 +65,7 @@ export default {
         {
           title: 'Nike Tricolor Shoes',
           color: 'black, green, grey',
-          bgtext: 'JSUT DO IT',
+          bgtext: 'JUST DO IT',
           src: require('./assets/tricolorNetShoes.jpg')
         },
       ]
