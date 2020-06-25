@@ -1,28 +1,75 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main id="app">
+    <section class="products">
+      <Product />
+    </section>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Product from './components/Product';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Product
+  },
+  data() {
+    return {
+      products: [
+        {
+          title: 'Nike Black Shoes',
+          color: 'black',
+          bgtext: 'NIKE',
+          src: require('./assets/blackShoes.jpg')
+        },
+        {
+          title: 'Nike Fluorescent Shoes',
+          color: 'fluorescent green',
+          bgtext: 'AIR',
+          src: require('./assets/fluorescentShoes.jpg')
+        },
+        {
+          title: 'Nike Green Shoes',
+          color: 'green',
+          bgtext: 'MAX',
+          src: require('./assets/greenShoes.jpg')
+        },
+        {
+          title: 'Nike Black Shoes',
+          color: 'black',
+          bgtext: 'FLEX',
+          src: require('./assets/greyShoes.jpg')
+        },
+        {
+          title: 'Nike Black Shoes',
+          color: 'grey, orange, blue',
+          bgtext: 'LIGHT',
+          src: require('./assets/multicolorShoes.jpg')
+        },
+        {
+          title: 'Nike Black Shoes',
+          color: 'black, red',
+          bgtext: 'SPORTS',
+          src: require('./assets/netRedShoes.jpg')
+        },
+        {
+          title: 'Nike Black Shoes',
+          color: 'red',
+          bgtext: 'RUN',
+          src: require('./assets/redShoes.jpg')
+        },
+        {
+          title: 'Nike Tricolor Shoes',
+          color: 'black, green, grey',
+          bgtext: 'JSUT DO IT',
+          src: require('./assets/tricolorNetShoes.jpg')
+        },
+      ]
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
