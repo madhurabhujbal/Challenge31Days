@@ -21,3 +21,21 @@ export default {
     props: ['product']
 }
 </script>
+
+<style>
+    .product {
+        flex: 1 1 33.333%;
+        width: 100%;
+        padding: 25px;
+    }
+
+    .product-inner {
+        position: relative;
+        padding: 25px;
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .product-image-wrap .image {
+        width: 100%;
+    }
+</style>
