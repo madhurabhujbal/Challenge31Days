@@ -4,6 +4,7 @@
       <header>
         <h1> Scroll Progress Bar </h1>
       </header>
+      <Progressbar />
       <Post />
     </main>
   </div>
@@ -11,10 +12,12 @@
 
 <script>
 import Post from './components/Post';
+import Progressbar from './components/Progressbar'
 
 export default {
   components: {
-    Post
+    Post,
+    Progressbar
   }
 }
 </script>
@@ -44,7 +47,7 @@ header {
 
 header h1 {
   color: #FFF;
-  font-size: 30px;
+  font-size: 28px;
   text-align: center;
 }
 
