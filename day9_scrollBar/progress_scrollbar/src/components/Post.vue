@@ -20,7 +20,17 @@
 
 <script>
 export default {
-    name: 'post'
+    name: 'post',
+    mounted () {
+        this.$el.addEventListener('scroll', function () {
+            let scrollTop = this.$el.scrollTop;
+            let c_height = this.$el.clientHeight; //This is height of actual article, not including height of scroll bar
+            let s_height = this.$el.scrollHeight;
+
+            let scrollPercent = Math.round( (scrollTop) / (s_height - c_height) * 100);
+            this.$emit('progressUpdate', scrollPercent); //Emits progressUpdate event to its parent i.e <article> and calls the scrollPercent functn on progressUpdate
+        }.bind(this))
+    }
 }
 </script>
 
