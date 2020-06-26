@@ -2,10 +2,10 @@
   <div id="app">
     <main>
       <header>
-        <h1> Scroll Progress Bar </h1>
+        <h1> Scroll Progress Bar {{ progress }}</h1>
       </header>
-      <Progressbar />
-      <Post />
+      <Progressbar :progress="progress" />
+      <Post @progressUpdate="setProgress" />
     </main>
   </div>
 </template>
@@ -18,6 +18,16 @@ export default {
   components: {
     Post,
     Progressbar
+  },
+  data () {
+    return {
+      progress: 0
+    }
+  },
+  methods: {
+    setProgress (progress) {
+      this.progress = progress;
+    }
   }
 }
 </script>
