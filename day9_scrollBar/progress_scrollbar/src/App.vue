@@ -4,14 +4,17 @@
       <header>
         <h1> Scroll Progress Bar </h1>
       </header>
+      <Post />
     </main>
   </div>
 </template>
 
 <script>
+import Post from './components/Post';
 
 export default {
   components: {
+    Post
   }
 }
 </script>
