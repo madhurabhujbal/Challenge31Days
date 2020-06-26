@@ -2,7 +2,7 @@
   <div id="app">
     <main>
       <header>
-        <h1> Scroll Progress Bar {{ progress }}</h1>
+        <h1> Scroll Progress Bar</h1>
       </header>
       <Progressbar :progress="progress" />
       <Post @progressUpdate="setProgress" />
