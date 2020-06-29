@@ -2,18 +2,24 @@
   <div id="app">
     <main>
       <div class="search-box">
-        <input type="text" class="search-bar" placeholder="Search..." />
+        <input
+        type="text"
+        class="search-bar"
+        placeholder="Search..."
+        v-model="query"
+        @keypress="fetchWeather"
+        />
       </div>
 
-      <div class="weather-wrap">
+      <div class="weather-wrap" v-if="typeof weather.main != 'undefined'">
         <div class="location-box">
-          <div class="location">Northampton, UK</div>
+          <div class="location">{{ weather.name }}, {{ weather.sys.country }}</div>
           <div class="date">Monday 29 June 2020</div>
         </div>
 
         <div class="weather-box">
           <div class="temp">9°C</div>
-          <div class="weather-status">Rain</div>
+          <div class="weather">Rain</div>
         </div>
       </div>
     </main>
@@ -26,7 +32,24 @@ export default {
   name: 'App',
   data() {
     return {
-      api_key : '446cc30bc37be1228e1d55b09335aeb6'
+      api_key: '446cc30bc37be1228e1d55b09335aeb6',
+      url_base: "http://api.openweathermap.org/data/2.5/",
+      query: '',
+      weather: {} //to store the data retrieved when requested to weather site
+    }
+  },
+  methods: {
+    fetchWeather (e) {
+      if(e.key == "Enter") {
+        fetch(`${this.url_base}weather?q=${this.query}&units=metric&APPID=${this.api_key}`)
+        .then(res => {
+          return res.json();
+        })
+        .then(this.setResults);
+      }
+    },
+    setResults(results) {
+      this.weather = results;
     }
   }
 }
@@ -116,7 +139,7 @@ main {
   box-shadow: 3px 6px rgba(0, 0, 0, 0.25);
 }
 
-.weather-box .weather-status {
+.weather-box .weather {
   color: #FFF;
   font-size: 48px;
   font-weight: 700;
