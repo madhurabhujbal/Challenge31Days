@@ -16,6 +16,7 @@ function imageObserver(entries, observer) {
             const img_src = img.dataset.src;//taking data from data-src in html
             console.log("Lazy loading", img);
             img.src = img_src;
+            observer.unobserve(img);
         }
     })
 }
