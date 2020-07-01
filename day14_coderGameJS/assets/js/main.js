@@ -43,7 +43,7 @@ document.addEventListener('keypress', coding);
 /* Functions */
 function increaseBytes(bytes) {//Increase bytes value by 'X'
     save.bytes +=bytes;
-    totalBytes += bytes;
+    save.totalBytes += bytes;
 }
 
 function coding() {
