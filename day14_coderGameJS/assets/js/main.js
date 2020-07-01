@@ -93,8 +93,8 @@ function upgrades() {// After each purchase, our bps is up by 0.1 and bytes incr
 
 function loop() {
     upgrades();
-    bytes_el.innerText = Math.round(save.bytes);
-    bps_el.innerText = save.bps.toFixed(1); //will return value of bps to 1 decimal place
+    bytes_el.innerText = `${Math.round(save.bytes)} bytes`;
+    bps_el.innerText = `${save.bps.toFixed(1)} bps`; //will return value of bps to 1 decimal place
 
     if (save.totalBytes >= save.player.nextLevel) {
         save.player.level++;
