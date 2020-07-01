@@ -35,3 +35,36 @@ let save = {
 //Get main elements
 const bytes_el = document.getElementById('bytes');
 const bps_el = document.getElementById('bps');
+const upgrades_el = document.getElementById('upgrades');
+
+/* Event Listeners */
+document.addEventListener('keypress', coding);
+
+/* Functions */
+function increaseBytes(bytes) {//Increase bytes value by 'X'
+    save.bytes +=bytes;
+    totalBytes += bytes;
+}
+
+function coding() {
+    increaseBytes(1);
+}
+
+function render() {
+    //Render upgrades
+    upgrades_el.innerHTML = "";//clears list to prevent duplication
+    save.upgrades.forEach(display_upgrades);
+}
+
+function display_upgrades(upgrade, i) {// i here is index
+    if(upgrade.unlocksAt <= save.player.level) {
+        let button = document.createElement('button');
+        button.classList.add('c-button');
+        button.innerText = `${upgrade.name} (${upgrade.cost})`;
+        button.addEventListener('click', () => purchase_upgrade(upgrade, i));
+        upgrades_el.appendChild(button);
+    }
+}
+
+//Call to functions
+render();
