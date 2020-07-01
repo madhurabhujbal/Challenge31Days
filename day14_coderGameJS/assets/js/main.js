@@ -36,6 +36,7 @@ let save = {
 const bytes_el = document.getElementById('bytes');
 const bps_el = document.getElementById('bps');
 const upgrades_el = document.getElementById('upgrades');
+const lvl_el = document.getElementById('level');
 
 /* Event Listeners */
 document.addEventListener('keypress', coding);
@@ -82,7 +83,7 @@ function purchase_upgrade(upgrade, i) {
     }
 }
 
-function upgrades() {
+function upgrades() {// After each purchase, our bps is up by 0.1 and bytes increase after 1s
     save.bps = 0;
     save.upgrades.forEach(upgrade => {
         save.bps += (upgrade.value * upgrade.quantity);
@@ -94,6 +95,13 @@ function loop() {
     upgrades();
     bytes_el.innerText = Math.round(save.bytes);
     bps_el.innerText = save.bps.toFixed(1); //will return value of bps to 1 decimal place
+
+    if (save.totalBytes >= save.player.nextLevel) {
+        save.player.level++;
+        save.player.nextLevel *= save.player.increase;
+        render();
+    }
+    lvl_el.innerText = `Level: ${save.player.level} (${Math.round(save.player.nextLevel - save.totalBytes)} bytes)`;
 }
 
 //Call to functions
