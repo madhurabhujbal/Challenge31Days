@@ -63,7 +63,7 @@ function display_upgrades(upgrade, i) {// i here is index
         button.innerText = `${upgrade.name} (${upgrade.cost}b)`;
         button.addEventListener('click', () => purchase_upgrade(upgrade, i));
         upgrades_el.appendChild(button);
-    } else if(upgrade.unlocksAt -1 == save.player.level) {
+    } else if(upgrade.unlocksAt - 1 == save.player.level) {
         let button = document.createElement('button');
         button.classList.add('c-button', 'disabled');
         button.innerText = `${upgrade.name} (Unlocks at level: ${upgrade.unlocksAt})`;
@@ -71,5 +71,22 @@ function display_upgrades(upgrade, i) {// i here is index
     }
 }
 
+function purchase_upgrade(upgrade, i) {
+    if(upgrade.cost <= save.bytes) {
+        save.bytes -= upgrade.cost;
+        save.upgrades[i].quantity++;
+        save.upgrades[i].cost = Math.round(upgrade.cost * upgrade.increase);
+        render();
+    } else {
+        alert('You need more Bytes, Keep on coding!');
+    }
+}
+
+function loop() {
+    bytes_el.innerText = Math.round(save.bytes);
+    bps_el.innerText = save.bps.toFixed(1); //will return value of bps to 1 decimal place
+}
+
 //Call to functions
 render();
+setInterval(loop, FPS); //Game loop
