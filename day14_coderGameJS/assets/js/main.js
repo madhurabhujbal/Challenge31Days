@@ -82,7 +82,16 @@ function purchase_upgrade(upgrade, i) {
     }
 }
 
+function upgrades() {
+    save.bps = 0;
+    save.upgrades.forEach(upgrade => {
+        save.bps += (upgrade.value * upgrade.quantity);
+        increaseBytes((upgrade.value * upgrade.quantity) / FPS);
+    })
+}
+
 function loop() {
+    upgrades();
     bytes_el.innerText = Math.round(save.bytes);
     bps_el.innerText = save.bps.toFixed(1); //will return value of bps to 1 decimal place
 }
