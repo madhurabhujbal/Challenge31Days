@@ -60,8 +60,13 @@ function display_upgrades(upgrade, i) {// i here is index
     if(upgrade.unlocksAt <= save.player.level) {
         let button = document.createElement('button');
         button.classList.add('c-button');
-        button.innerText = `${upgrade.name} (${upgrade.cost})`;
+        button.innerText = `${upgrade.name} (${upgrade.cost}b)`;
         button.addEventListener('click', () => purchase_upgrade(upgrade, i));
+        upgrades_el.appendChild(button);
+    } else if(upgrade.unlocksAt -1 == save.player.level) {
+        let button = document.createElement('button');
+        button.classList.add('c-button', 'disabled');
+        button.innerText = `${upgrade.name} (Unlocks at level: ${upgrade.unlocksAt})`;
         upgrades_el.appendChild(button);
     }
 }
