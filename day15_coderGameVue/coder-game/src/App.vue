@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="game">
     Hello
   </div>
 </template>
@@ -13,4 +13,14 @@ export default {
 </script>
 
 <style lang="scss">
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'montserrat', sans-serif;
+  }
+
 </style>
