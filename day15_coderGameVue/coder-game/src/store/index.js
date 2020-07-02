@@ -60,8 +60,17 @@ export default new Vuex.Store({
       } else {
         alert('You need more bytes');
       }
+    },
+    bytesPerSecond: state => {
+      state.bps = 0; //we have to reset this every time to get true bps
+      state.upgrades.forEach(upgrade => { //loop through each upgrade. This function is called 60 times/sec
+        state.bps += (upgrade.bps * upgrade.quantity); //getting bps after all upgrades combined into one
+        state.bytes += (upgrade.bps * upgrade.quantity) / 60; //its divided by 60 bcoz we want bytes/sec
+        state.totalBytes += (upgrade.bps * upgrade.quantity) / 60;
+      });
     }
   },
+
   getters: {
     bytesUntilLevelUp: state => {
       return Math.round(state.player.nextLevel - state.totalBytes); //will return bytes needed until next level
