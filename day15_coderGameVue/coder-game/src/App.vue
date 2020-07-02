@@ -14,12 +14,18 @@ export default {
   },
   methods: {
     coding() {
-      //Do something
+      this.$store.commit('incrementBytes', this.$store.state.bpk); //We want to commit every time any change occurs/state changes/mutates on a field. Here, we commit when bpk is changed
     },
 
     loop() { //this loop is called 60frames/sec
       //Game loop
+      this.levelManager();
       requestAnimationFrame(this.loop);
+    },
+    levelManager() {
+      if (this.$store.getters.bytesUntilLevelUp <= 0) {
+        this.$store.commit('levelUp');
+      }
     }
   },
 
