@@ -8,7 +8,26 @@
 
 export default {
   name: 'App',
-  components: {}
+  components: {},
+  methods: {
+    coding() {
+      //Do something
+    },
+
+    loop() { //this loop is called 60frames/sec
+      //Game loop
+      requestAnimationFrame(this.loop);
+    }
+  },
+
+  created() {
+    this.loop(); //Once this component is created, start to loop
+    window.addEventListener('keypress', this.coding); //Recognises key pressed anywhere on game window
+  },
+
+  destroyed() {
+    window.addEventListener('keypress', this.coding); //Recognises key pressed anywhere on game window
+  }
 }
 </script>
 
