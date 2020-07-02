@@ -6,7 +6,7 @@
         <div class="bytes">{{ bytes }}</div>
         <div class="bps">Bytes per second: {{ bps }}</div>
         <div class="level">Current Level: {{ level }}</div>
-        <div class="next-level">Bytes Until Next Level: {{bytesUntilNextLevel}}</div>
+        <div class="next-level">Bytes Until Next Level: {{bytesUntilLevelUp}}</div>
     </div>
 </template>
 
