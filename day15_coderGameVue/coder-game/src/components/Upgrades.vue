@@ -14,7 +14,7 @@ export default {
     name: 'upgrades',
     computed: {
         upgrades() {
-            return this.$store.state.upgrades;
+            return this.$store.getters.availableUpgrades;
         }
     }
 }
