@@ -22,6 +22,7 @@ export default {
 
     loop() { //this loop is called 60frames/sec
       //Game loop
+      this.$store.commit('bytesPerSecond'); //will be called every single frame after upgrade is purchased
       this.levelManager();
       requestAnimationFrame(this.loop);
     },
