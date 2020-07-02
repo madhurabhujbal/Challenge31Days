@@ -7,6 +7,10 @@
         <button :class="`button ${upgrade.disabled ? 'disabled' : ''}`">
         {{ upgrade.name }} {{ upgrade.disabled ? `(lvl: ${upgrade.unlocksAt})` : ''}}
         </button>
+        <div class="details">
+            <div class="cost">Cost: {{ upgrade.cost }} </div>
+            <div class="quantity">Quantity: {{ upgrade.quantity }} </div>
+        </div>
         </div>
     </div>
 </template>
@@ -54,6 +58,12 @@ export default {
             text-align: center;
             text-transform: uppercase;
             cursor: pointer;
+
+            &.disabled {
+                color: #222;
+                background-color: #CCC;
+                pointer-events: none;
+            }
         }
     }
 </style>
