@@ -4,7 +4,7 @@
         :key="index"
         class="upgrade"
         >
-        <button :class="`button ${upgrade.disabled ? 'disabled' : ''}`">
+        <button :class="`button ${upgrade.disabled ? 'disabled' : ''}`" @click="() => buyUpgrade(index) ">
         {{ upgrade.name }} {{ upgrade.disabled ? `(lvl: ${upgrade.unlocksAt})` : ''}}
         </button>
         <div class="details">
@@ -21,6 +21,14 @@ export default {
     computed: {
         upgrades() {
             return this.$store.getters.availableUpgrades;
+        }
+    },
+    methods: {
+        buyUpgrade(index) {
+            this.$store.commit('buyUpgrade', {
+                index,
+                amount: 1
+            });
         }
     }
 }
@@ -40,7 +48,11 @@ export default {
 
         .button, .cost, .quantity {
             color: #FFF;
-            margin: 0px 15px;
+            margin: 0 15px;
+        }
+
+        .details {
+            flex: 1 1 100%;
         }
 
         .button {
@@ -48,7 +60,7 @@ export default {
             border: none;
             outline: none;
             background: none;
-            display: inline;
+            display: inline-block;
             min-width: 300px;
             padding: 15px 25px;
             background-color: #28A484;
