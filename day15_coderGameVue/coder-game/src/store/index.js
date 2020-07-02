@@ -44,5 +44,9 @@ export default new Vuex.Store({
     ]
   },
   mutations: {},
-  getters: {}
+  getters: {
+    bytesUntilLevelUp: state => {
+      return Math.round(state.player.nextLevel - state.totalBytes); //will return bytes needed until next level
+    }
+  }
 })
