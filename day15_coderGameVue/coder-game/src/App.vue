@@ -1,14 +1,17 @@
 <template>
   <div id="game">
-    Hello
+    <Overview />
   </div>
 </template>
 
 <script>
+import Overview from './components/Overview';
 
 export default {
   name: 'App',
-  components: {},
+  components: {
+    Overview
+  },
   methods: {
     coding() {
       //Do something
