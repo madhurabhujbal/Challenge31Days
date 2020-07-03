@@ -127,4 +127,12 @@ body {
   opacity: 0;
 }
 
+.slide-enter-active, .slide-leave-active {
+  transition: transform 0.5s;
+}
+
+.slide-enter, .slide-leave-to {
+  transform: translateY(-50%) translateX(100vw);
+}
+
 </style>
