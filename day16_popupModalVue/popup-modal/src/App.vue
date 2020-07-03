@@ -76,4 +76,13 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+/* These stylings will be binded to transition tag in html with name fade */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 </style>
