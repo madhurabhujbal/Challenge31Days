@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    Hello world
+    <button class="button" @click="showModal = true">
+      Show Modal
+    </button>
+    <transition name="fade" appear>
+      <div class="modal-overlay" v-if="showModal"></div>
+    </transition>
   </div>
 </template>
 
