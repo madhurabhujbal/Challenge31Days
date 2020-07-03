@@ -66,4 +66,14 @@ body {
   box-shadow: 6px 6px rgba(0, 0, 0, 0.6);
 }
 
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 98;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 </style>
