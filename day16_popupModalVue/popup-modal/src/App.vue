@@ -3,8 +3,21 @@
     <button class="button" @click="showModal = true">
       Show Modal
     </button>
+
     <transition name="fade" appear>
       <div class="modal-overlay" v-if="showModal" @click="showModal = false"></div>
+    </transition>
+
+    <transition name="slide" appear>
+      <div class="modal">
+        <h1>Lorem Ipsum</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quod necessitatibus est dolorum, culpa tempore non unde deserunt eaque voluptates?
+        </p>
+        <button class="button" @click="showModal = false">
+          Close Modal
+        </button>
+      </div>
     </transition>
   </div>
 </template>
