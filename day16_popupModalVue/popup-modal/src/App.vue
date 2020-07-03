@@ -4,7 +4,7 @@
       Show Modal
     </button>
     <transition name="fade" appear>
-      <div class="modal-overlay" v-if="showModal"></div>
+      <div class="modal-overlay" v-if="showModal" @click="showModal = false"></div>
     </transition>
   </div>
 </template>
