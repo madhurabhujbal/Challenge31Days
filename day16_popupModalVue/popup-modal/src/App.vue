@@ -9,7 +9,7 @@
     </transition>
 
     <transition name="slide" appear>
-      <div class="modal">
+      <div class="modal" v-if="showModal">
         <h1>Lorem Ipsum</h1>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quod necessitatibus est dolorum, culpa tempore non unde deserunt eaque voluptates?
@@ -87,6 +87,35 @@ body {
   bottom: 0;
   z-index: 98;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+
+  width: 100%;
+  max-width: 400px;
+  background-color: #FFF;
+  border-radius: 16px;
+
+  padding: 25px;
+}
+
+.modal h1 {
+  color: #222;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.modal p {
+  color: #666;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
 }
 
 /* These stylings will be binded to transition tag in html with name fade */
