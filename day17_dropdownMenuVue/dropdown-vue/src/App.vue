@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    Hello world
+    <header></header>
   </div>
 </template>
 
@@ -22,6 +22,12 @@ export default {
 
 body {
   font-family: 'montserrat', sans-serif;
+}
+
+header {
+  width: 100vw;
+  background-color: #222;
+  padding: 15px;
 }
 
 </style>
