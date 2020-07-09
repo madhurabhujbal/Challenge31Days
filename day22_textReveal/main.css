@@ -22,6 +22,19 @@ body {
   position: relative;
 }
 
+.swipe-in-text:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 90%;
+  width: 90%;
+  bottom: 0;
+  z-index: 1;
+  background-color: #FF5858;
+}
+
 .swipe-in-text .text {
   color: #FFF;
   font-size: 72px;
