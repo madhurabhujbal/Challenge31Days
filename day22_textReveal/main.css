@@ -29,15 +29,11 @@ body {
   top: 0;
   left: 0;
   right: 100%;
-  width: 100%;
+  width: 0%;
   bottom: 0;
   z-index: 1;
   background-color: #FF5858;
   animation: swipe-in-text 1s ease-out 1s forwards;
-}
-
-.swipe-in-text.white:after {
-  background-color: #FFF;
 }
 
 .swipe-in-text .text {
@@ -52,6 +48,14 @@ body {
 .swipe-in-text .text.small {
   font-size: 32px;
   font-weight: 500;
+}
+
+.swipe-in-text.white:after {
+  background-color: #FFF;
+}
+
+.swipe-in-text.white .text {
+  animation-delay: 2s;
 }
 
 @keyframes swipe-in-text {
