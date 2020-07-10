@@ -65,6 +65,10 @@ header {
             @include breakpoint(1024px) {
                 font-size: 56px;
             }
+
+            @include breakpoint(1280px) {
+                font-size: 72px;
+            }
         }
 
         h2 {
@@ -84,6 +88,10 @@ header {
             @include breakpoint(1024px) {
                 font-size: 96px;
             }
+
+            @include breakpoint(1280px) {
+                font-size: 128px;
+            }
         }
 
         .countdown {
@@ -101,6 +109,10 @@ header {
 
             @include breakpoint(1024px) {
                 font-size: 72px;
+            }
+
+            @include breakpoint(1280px) {
+                font-size: 88px;
             }
         }
     }
