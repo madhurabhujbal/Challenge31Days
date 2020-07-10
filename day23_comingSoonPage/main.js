@@ -39,5 +39,8 @@ function tick() {
         if (secs < 10) {
             secs = "0" + secs;
         }
+
+        //Create Time String
+        let time = `${days} : ${hours} : ${mins} : ${secs}`;
     }
 }
