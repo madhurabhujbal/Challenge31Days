@@ -27,5 +27,11 @@ function tick() {
         if (hours < 10) {
             hours = "0" + hours;
         }
+
+        //Algorithm to calculate minutes
+        let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        if (mins < 10) {
+            mins = "0" + mins;
+        }
     }
 }
