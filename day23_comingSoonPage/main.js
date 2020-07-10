@@ -21,5 +21,11 @@ function tick() {
         if (days < 10) {
             days = "0" + days;
         }
+
+        //Algorithm to calculate hours
+        let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        if (hours < 10) {
+            hours = "0" + hours;
+        }
     }
 }
