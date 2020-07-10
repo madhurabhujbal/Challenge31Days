@@ -57,6 +57,10 @@ header {
             @include breakpoint(480px) {
                 font-size: 36px;
             }
+
+            @include breakpoint(768px) {
+                font-size: 42px;
+            }
         }
 
         h2 {
@@ -67,6 +71,10 @@ header {
 
             @include breakpoint(480px) {
                 font-size: 56px;
+            }
+
+            @include breakpoint(768px) {
+                font-size: 72px;
             }
         }
 
