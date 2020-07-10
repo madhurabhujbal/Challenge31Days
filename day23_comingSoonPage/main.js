@@ -33,5 +33,11 @@ function tick() {
         if (mins < 10) {
             mins = "0" + mins;
         }
+
+        //Algorithm to calculate seconds
+        let secs = Math.floor((t % (1000 * 60)) / (1000));
+        if (secs < 10) {
+            secs = "0" + secs;
+        }
     }
 }
