@@ -37,4 +37,20 @@ header .content {
   position: relative;
   z-index: 1;
 }
+
+header .content h1 {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+header .content h1 span {
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  header .content h1 {
+    font-size: 36px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

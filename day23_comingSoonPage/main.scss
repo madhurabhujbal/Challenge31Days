@@ -44,5 +44,19 @@ header {
     .content {
         position: relative;
         z-index: 1;
+
+        h1 {
+            color: #FFF;
+            font-size: 32px;
+            font-weight: 900;
+
+            span {
+                font-weight: 400;
+            }
+
+            @include breakpoint(768px) {
+                font-size: 36px;
+            }
+        }
     }
 }
