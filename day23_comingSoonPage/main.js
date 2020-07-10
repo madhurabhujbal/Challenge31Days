@@ -12,14 +12,14 @@ function tick() {
     let t = launchDate - now;
 
     //Check if time is above 0
-    // if(t > 0) {
-    //     //Setup days, hours, seconds and minutes
+    if(t > 0) {
+        //Setup days, hours, seconds and minutes
 
-    //     //Algorithm to calculate days
-    //     let days = Math.floor(t / (1000 * 60 * 60 * 24));
-    //     //Prefix any number below 10 with '0'
-    //     if (days < 10) {
-    //         days = "0" + days;
-    //     }
-    // }
+        //Algorithm to calculate days
+        let days = Math.floor(t / (1000 * 60 * 60 * 24));
+        //Prefix any number below 10 with '0'
+        if (days < 10) {
+            days = "0" + days;
+        }
+    }
 }
