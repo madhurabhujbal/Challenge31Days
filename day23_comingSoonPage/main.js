@@ -1,5 +1,5 @@
 //Setup End Date for countdown (getTime == Time in miliseconds)
-let launchDate = new Date("July 11, 2020 12:00:00").getTime();
+let launchDate = new Date("July 12, 2020 12:00:00").getTime();
 
 //Setup timer to tick every 1 second
 let timer = setInterval(tick, 1000);
@@ -42,5 +42,8 @@ function tick() {
 
         //Create Time String
         let time = `${days} : ${hours} : ${mins} : ${secs}`;
+
+        //Set time on document
+        document.querySelector('.countdown').innerText = time;
     }
 }
