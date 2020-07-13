@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .grid {
+    padding: 1em;
+  }
+
+  .grid-inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5 em;
+  }
+
+  .item {
+    flex: 1 1 100%;
+    padding: 0.5em;
+  }
+
+  .item-inner {
+    background-size: cover;
+    background-image: url('https://picsum.photos/seed/1/640//400');
+    padding-top: calc(100% / (16/9));
+  }
