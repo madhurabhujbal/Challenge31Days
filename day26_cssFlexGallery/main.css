@@ -58,3 +58,21 @@
 .item:nth-child(12) .item-inner {
     background-image: url('https://picsum.photos/seed/12/640//400');
   }
+
+@media screen and (min-width: 480px) {
+    .item {
+        flex: 1 1 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .item {
+        flex: 1 1 33.333%;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .item {
+        flex: 1 1 25%;
+    }
+}
