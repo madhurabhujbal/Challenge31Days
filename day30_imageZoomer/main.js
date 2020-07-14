@@ -14,3 +14,8 @@ image.addEventListener('mousemove', function(e) {
 
     image.style.backgroundPosition = `${bgPosX}% ${bgPosY}%`;
 });
+
+//Return background position to center when mouse is removed from image
+image.addEventListener('mouseleave', function(){
+    image.style.backgroundPosition = "center";
+});
