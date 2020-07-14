@@ -8,5 +8,9 @@ image.addEventListener('mousemove', function(e) {
     let mouseX = e.offsetX;
     let mouseY = e.offsetY;
 
-    console.log(mouseY + " : " + mouseX);
+    //Calculating position of background in percentage
+    let bgPosX = (mouseX / width * 100);
+    let bgPosY = (mouseY / height * 100);
+
+    image.style.backgroundPosition = `${bgPosX}% ${bgPosY}%`;
 });
