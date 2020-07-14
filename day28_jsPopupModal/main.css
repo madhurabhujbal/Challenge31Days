@@ -55,6 +55,7 @@ button {
     color: #FFF;
     border-radius: 8px;
     transition: 0.4s;
+    cursor: pointer;
 }
 
 .modal .close_modal:hover {
