@@ -46,6 +46,21 @@ button {
     background: #FFF;
 }
 
+.modal header, main, footer {
+    padding: 15px;
+}
+
+.modal .close_modal {
+    background: linear-gradient(to right, #FF5858, #CC2E5D);
+    color: #FFF;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.modal .close_modal:hover {
+    box-shadow: inset 3.5px 3.5px rgba(0, 0, 0, 0.2);
+}
+
 .modal.is-active {
     opacity: 1;
     pointer-events: all;
