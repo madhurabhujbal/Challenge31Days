@@ -44,6 +44,7 @@ button {
     width: 100%;
     max-width: 480px;
     background: #FFF;
+    transition: 0.4s ease-out;
 }
 
 .modal header, main, footer {
