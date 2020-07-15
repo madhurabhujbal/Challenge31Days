@@ -42,6 +42,18 @@ header .container .navbar .menu .menu-item {
   position: relative;
 }
 
+header .container .navbar .menu .menu-item a {
+  display: block;
+  color: #FFF;
+  text-decoration: none;
+  padding: 10px 25px;
+}
+
+header .container .navbar .menu .menu-item a:hover {
+  color: #FF5858;
+  background-color: #323232;
+}
+
 main section {
   padding-top: 50px;
   padding-bottom: 50px;

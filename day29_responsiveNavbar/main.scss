@@ -44,17 +44,17 @@ header {
                 .menu-item {
                     position: relative;
 
-                    // a {
-                    //     display: block;
-                    //     color: #FFF;
-                    //     text-decoration: none;
-                    //     padding: 10px 25px;
+                    a {
+                        display: block;
+                        color: #FFF;
+                        text-decoration: none;
+                        padding: 10px 25px;
 
-                    //     &:hover {
-                    //         color: #FF5858;
-                    //         background-color: rgb(50, 50, 50);
-                    //     }
-                    // }
+                        &:hover {
+                            color: #FF5858;
+                            background-color: rgb(50, 50, 50);
+                        }
+                    }
                 }
             }
         }
