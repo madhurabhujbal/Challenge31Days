@@ -37,6 +37,11 @@ header .container .mobile-nav {
   display: none;
 }
 
+header .container .mobile-nav .open-menu {
+  color: #FFF;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 767px) {
   header .container .mobile-nav {
     display: block;
