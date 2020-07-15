@@ -55,6 +55,32 @@ header {
                             background-color: rgb(50, 50, 50);
                         }
                     }
+
+                    &.has-sub-menu {
+                        //for the first a tag in this class
+                        > a {
+                            position: relative;
+                            padding-right: 35px;
+
+                            &:after {
+                                content: '+';
+                                display: block;
+                                position: absolute;
+                                top: 50%;
+                                right: 15px;
+                                transform: translateY(-50%);
+                                color: #FFF;
+                                font-size: 18px;
+                                font-weight: 500;
+                            }
+
+                            &:hover {
+                                &::after {
+                                    color: #FF5858;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

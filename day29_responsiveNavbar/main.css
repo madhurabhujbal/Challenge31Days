@@ -54,6 +54,27 @@ header .container .navbar .menu .menu-item a:hover {
   background-color: #323232;
 }
 
+header .container .navbar .menu .menu-item.has-sub-menu > a {
+  position: relative;
+  padding-right: 35px;
+}
+
+header .container .navbar .menu .menu-item.has-sub-menu > a:after {
+  content: '+';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+header .container .navbar .menu .menu-item.has-sub-menu > a:hover::after {
+  color: #FF5858;
+}
+
 main section {
   padding-top: 50px;
   padding-bottom: 50px;
