@@ -132,6 +132,10 @@ header .container .navbar .menu .menu-item.has-sub-menu:hover > .sub-menu .sub-m
     pointer-events: none;
     transition: 0.4s ease-out;
   }
+  header .container .navbar.is-active {
+    opacity: 1;
+    pointer-events: all;
+  }
   header .container .navbar .menu {
     flex-direction: column;
   }

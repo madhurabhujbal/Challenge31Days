@@ -143,6 +143,11 @@ header {
                 pointer-events: none;
                 transition: 0.4s ease-out;
 
+                &.is-active {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+
                 .menu {
                     flex-direction: column;
 
