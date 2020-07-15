@@ -118,6 +118,19 @@ header .container .navbar .menu .menu-item.has-sub-menu:hover > .sub-menu .sub-m
   right: 100%;
 }
 
+header .container .navbar .close-menu {
+  display: none;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  header .container .navbar .close-menu {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 767px) {
   header .container .navbar {
     display: block;

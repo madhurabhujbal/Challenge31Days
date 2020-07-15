@@ -129,6 +129,17 @@ header {
                 }
             }
 
+            .close-menu {
+                display: none;
+                color: #FFF;
+                text-decoration: none;
+                text-align: center;
+
+                @media screen and (max-width: 767px) {
+                    display: block;
+                }
+            }
+
             @media screen and (max-width: 767px) {
                 display: block;
                 position: absolute;
