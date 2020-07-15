@@ -80,6 +80,38 @@ header {
                                 }
                             }
                         }
+
+                        .sub-menu {
+                            position: absolute;
+                            z-index: 999;
+
+                            opacity: 1;
+                            transform: translateY(-200px);
+                            pointer-events: none;
+                            transition: 0.4s ease-out;
+
+                            min-width: 100%;
+                            width: max-content;
+                            background-color: #222;
+                            list-style-type: none;
+
+                            .menu-item {
+                                width: 100%;
+                            }
+                        }
+
+                        // &:hover {
+                        //     > .sub-menu {
+                        //         opacity: 1;
+                        //         transform: translateY(0);
+                        //         pointer-events: all;
+
+                        //         .sub-menu {
+                        //             top: 0;
+                        //             right: 100%;
+                        //         }
+                        //     }
+                        // }
                     }
                 }
             }

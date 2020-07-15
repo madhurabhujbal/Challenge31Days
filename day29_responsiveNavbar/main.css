@@ -75,6 +75,23 @@ header .container .navbar .menu .menu-item.has-sub-menu > a:hover::after {
   color: #FF5858;
 }
 
+header .container .navbar .menu .menu-item.has-sub-menu .sub-menu {
+  position: absolute;
+  z-index: 999;
+  opacity: 1;
+  transform: translateY(-200px);
+  pointer-events: none;
+  transition: 0.4s ease-out;
+  min-width: 100%;
+  width: max-content;
+  background-color: #222;
+  list-style-type: none;
+}
+
+header .container .navbar .menu .menu-item.has-sub-menu .sub-menu .menu-item {
+  width: 100%;
+}
+
 main section {
   padding-top: 50px;
   padding-bottom: 50px;
