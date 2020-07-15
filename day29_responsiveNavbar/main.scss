@@ -10,6 +10,34 @@ body {
     font-family: sans-serif;
 }
 
+header {
+    background-color: #222;
+
+    .container {
+        position: relative;
+
+        max-width: 960px;
+        padding: 15px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .brand {
+            h2 {
+                color: #FFF;
+                font-size: 28px;
+                font-weight: 900;
+            }
+
+            span {
+                color: #FF5858;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
 main{
     section {
         padding-top: 50px;
