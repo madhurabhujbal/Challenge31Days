@@ -1,3 +1,5 @@
+/* To include scss file to be watched, go to File -> Preferences -> Settings -> Type sass in search box -> go to 'Live sass compilation' option on left side -> go in any option and give path of current dir -> Click watch sass */
+
 * {
   margin: 0;
   padding: 0;
@@ -69,6 +71,7 @@ header .container .navbar .menu .menu-item a:hover {
   background-color: #323232;
 }
 
+/* for the first a tag in this class */
 header .container .navbar .menu .menu-item.has-sub-menu > a {
   position: relative;
   padding-right: 35px;
