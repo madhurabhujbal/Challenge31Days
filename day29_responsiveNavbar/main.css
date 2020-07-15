@@ -103,6 +103,38 @@ header .container .navbar .menu .menu-item.has-sub-menu:hover > .sub-menu .sub-m
   right: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  header .container .navbar {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 999;
+    background-color: #222;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s ease-out;
+  }
+  header .container .navbar .menu {
+    flex-direction: column;
+  }
+  header .container .navbar .menu .has-sub-menu > .sub-menu {
+    display: none;
+    position: relative;
+  }
+  header .container .navbar .menu .has-sub-menu > .sub-menu .sub-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  header .container .navbar .menu .has-sub-menu:hover > .sub-menu {
+    display: block;
+  }
+}
+
 main section {
   padding-top: 50px;
   padding-bottom: 50px;
