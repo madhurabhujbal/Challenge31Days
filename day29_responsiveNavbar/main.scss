@@ -36,6 +36,13 @@ header {
             }
         }
 
+        .mobile-nav {
+            display: none;
+            @media screen and (max-width: 767px) {
+                display: block;
+            }
+        }
+
         .navbar {
             .menu {
                 display: flex;

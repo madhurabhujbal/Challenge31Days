@@ -33,6 +33,16 @@ header .container .brand h2 span {
   font-weight: 400;
 }
 
+header .container .mobile-nav {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  header .container .mobile-nav {
+    display: block;
+  }
+}
+
 header .container .navbar .menu {
   display: flex;
   list-style-type: none;
