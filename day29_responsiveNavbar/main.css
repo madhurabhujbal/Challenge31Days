@@ -28,9 +28,18 @@ header .container .brand h2 {
   font-weight: 900;
 }
 
-header .container .brand span {
+header .container .brand h2 span {
   color: #FF5858;
   font-weight: 400;
+}
+
+header .container .navbar .menu {
+  display: flex;
+  list-style-type: none;
+}
+
+header .container .navbar .menu .menu-item {
+  position: relative;
 }
 
 main section {

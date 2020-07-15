@@ -28,13 +28,37 @@ header {
                 color: #FFF;
                 font-size: 28px;
                 font-weight: 900;
-            }
 
-            span {
-                color: #FF5858;
-                font-weight: 400;
+                span {
+                    color: #FF5858;
+                    font-weight: 400;
+                }
             }
         }
+
+        .navbar {
+            .menu {
+                display: flex;
+                list-style-type: none;
+
+                .menu-item {
+                    position: relative;
+
+                    // a {
+                    //     display: block;
+                    //     color: #FFF;
+                    //     text-decoration: none;
+                    //     padding: 10px 25px;
+
+                    //     &:hover {
+                    //         color: #FF5858;
+                    //         background-color: rgb(50, 50, 50);
+                    //     }
+                    // }
+                }
+            }
+        }
+
     }
 }
 
