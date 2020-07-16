@@ -61,3 +61,28 @@ h3 {
     box-shadow: inset -1px -1px 3px 1px #FFF,
     inset 1px 1px 3px 1px #C4C4C4;
 }
+
+.btn {
+    color: #AABBBB;
+    cursor: pointer;
+    border: 3px solid transparent;
+    padding: 13px;
+    font-weight: 700;
+
+    box-shadow: -4px -4px 13px 4px #FFF,
+    4px 4px 13px 4px #C4C4C4;
+}
+
+.btn ion-icon {
+    margin-right: 8px;
+}
+
+.btn:focus {
+    box-shadow: -4px -4px 13px 4px #FFF,
+    4px 4px 13px 4px #C4C4C4;
+}
+
+.btn:hover {
+    box-shadow: -3px -3px 8px 3px #FFF,
+    3px 3px 8px 3px #C4C4C4;
+}
