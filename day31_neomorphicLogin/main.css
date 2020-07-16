@@ -52,3 +52,12 @@ h3 {
     font-size: 18px;
     transition: 0.2s ease-out;
 }
+
+.input::placeholder {
+    color: #CCC;
+}
+
+.input:focus {
+    box-shadow: inset -1px -1px 3px 1px #FFF,
+    inset 1px 1px 3px 1px #C4C4C4;
+}
