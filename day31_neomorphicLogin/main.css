@@ -86,3 +86,14 @@ h3 {
     box-shadow: -3px -3px 8px 3px #FFF,
     3px 3px 8px 3px #C4C4C4;
 }
+
+.btn.active {
+
+}
+
+.btn:active {
+    color: #FF5858;
+    box-shadow: -4px -4px 13px 4px #C4C4C4,
+    4px 4px 13px 4px #FFF;
+    border-color: #DFDFDF;
+}
