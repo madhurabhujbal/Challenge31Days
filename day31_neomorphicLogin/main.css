@@ -12,3 +12,12 @@ body {
     min-height: 100vh;
     background-color: #EEE;
 }
+
+.form {
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: -2px -2px 6px 2px #FFF, /* Property that gives neomorphic effect. Shadow for 2 boxes on top of other */
+    2px 2px 6px 2px #C4C4C4;
+}
