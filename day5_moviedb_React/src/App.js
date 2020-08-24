@@ -18,15 +18,16 @@ function App() {
     if (e.key === "Enter") {
       axios(apiUrl + "&s=" + state.s).then(({ data }) => {
         let results = data.Search;
-        console.log(results);
+        // console.log(results);
         if (results === undefined) {
           setState((prevState) => {
-            return { ...prevState, results: "error found" };
+            return { ...prevState, results: "not found" };
+          });
+        } else {
+          setState((prevState) => {
+            return { ...prevState, results: results };
           });
         }
-        setState((prevState) => {
-          return { ...prevState, results: results };
-        });
       });
     }
   };
