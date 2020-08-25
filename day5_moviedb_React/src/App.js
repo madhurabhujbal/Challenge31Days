@@ -16,6 +16,8 @@ function App() {
 
   const search = (e) => {
     if (e.key === "Enter") {
+      state.s = e.target.value;
+      console.log(state.s);
       axios(apiUrl + "&s=" + state.s).then(({ data }) => {
         let results = data.Search;
         // console.log(results);
@@ -32,15 +34,15 @@ function App() {
     }
   };
 
-  const handleInput = (e) => {
-    let s = e.target.value;
-    setState((prevState) => {
-      return { ...prevState, s: s };
-    });
-
-    //check text entered in search textbox is getting stored in variable s
-    //console.log(state.s);
-  };
+  // const handleInput = (e) => {
+  //   let s = e.target.value;
+  //   console.log(s);
+  //   setState((prevState) => {
+  //     return { ...prevState, s: s };
+  //   });
+  //   //check text entered in search textbox is getting stored in variable s
+  //   //console.log(state.s);
+  // };
 
   const openPopup = (id) => {
     axios(apiUrl + "&i=" + id).then(({ data }) => {
@@ -64,7 +66,7 @@ function App() {
         <h1> Movie Database </h1>
       </header>
       <main>
-        <Search handleInput={handleInput} search={search} />
+        <Search search={search} />
         <Results results={state.results} openPopup={openPopup} />
 
         {typeof state.selected.Title != "undefined" ? (
