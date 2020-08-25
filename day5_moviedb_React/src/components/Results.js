@@ -4,7 +4,7 @@ import Result from "./Result";
 function Results({ results, openPopup }) {
   if (results === "not found")
     return (
-      <section className="results">
+      <section className="results-not-found">
         <h3>No data found</h3>
       </section>
     );
