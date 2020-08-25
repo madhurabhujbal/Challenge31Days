@@ -19,8 +19,8 @@ function App() {
       state.s = e.target.value;
       console.log(state.s);
       axios(apiUrl + "&s=" + state.s).then(({ data }) => {
+        state.s = "";
         let results = data.Search;
-        // console.log(results);
         if (results === undefined) {
           setState((prevState) => {
             return { ...prevState, results: "not found" };
@@ -33,16 +33,6 @@ function App() {
       });
     }
   };
-
-  // const handleInput = (e) => {
-  //   let s = e.target.value;
-  //   console.log(s);
-  //   setState((prevState) => {
-  //     return { ...prevState, s: s };
-  //   });
-  //   //check text entered in search textbox is getting stored in variable s
-  //   //console.log(state.s);
-  // };
 
   const openPopup = (id) => {
     axios(apiUrl + "&i=" + id).then(({ data }) => {
