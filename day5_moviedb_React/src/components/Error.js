@@ -2,7 +2,7 @@ import React from "react";
 
 function Error() {
   return (
-    <section className="results-not-found">
+    <div>
       <h3>Sorry! We could not find this movie</h3>
       <div className="gif">
         <iframe
@@ -12,7 +12,7 @@ function Error() {
           allowFullScreen
         ></iframe>
       </div>
-    </section>
+    </div>
   );
 }
 
