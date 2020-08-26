@@ -1,5 +1,6 @@
 import React from "react";
 import Result from "./Result";
+import Gif from "./Gif";
 
 function Results({ results, openPopup }) {
   if (results === "not found")
