@@ -1,6 +1,6 @@
 import React from "react";
 
-function Gif() {
+function Error() {
   return (
     <section className="results-not-found">
       <h3>Sorry! We could not find this movie</h3>
@@ -16,4 +16,4 @@ function Gif() {
   );
 }
 
-export default Gif;
+export default Error;
