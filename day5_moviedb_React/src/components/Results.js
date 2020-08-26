@@ -1,12 +1,12 @@
 import React from "react";
 import Result from "./Result";
-import Gif from "./Gif";
+import Error from "./Error";
 
 function Results({ results, openPopup }) {
   if (results === "not found")
     return (
       <section className="results-not-found">
-        <Gif />
+        <Error />
       </section>
     );
   else {
