@@ -86,8 +86,22 @@ section {
 
 .results-not-found {
   font-size: 30px;
+  text-align: center;
+  padding-top: 120px;
   font-weight: 300;
   color: #eee;
+}
+
+.gif {
+  padding-top: 5%;
+  position: relative;
+}
+
+.gif iframe.iframe {
+  position: relative;
+  align-items: center;
+  width: 50%;
+  height: 30vh;
 }
 
 .popup {
