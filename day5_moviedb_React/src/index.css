@@ -97,10 +97,11 @@ section {
   position: relative;
 }
 
-.gif.iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.gif iframe.iframe {
+  position: relative;
+  align-items: center;
+  width: 50%;
+  height: 30vh;
 }
 
 .popup {
