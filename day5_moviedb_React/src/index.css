@@ -86,9 +86,16 @@ section {
 
 .results-not-found {
   font-size: 30px;
+  text-align: center;
+  padding-top: 120px;
   font-weight: 300;
   color: #eee;
 }
+
+/* .gif {
+  padding-top: 54%;
+  position: relative;
+} */
 
 .popup {
   position: fixed;
