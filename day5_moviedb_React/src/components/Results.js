@@ -6,10 +6,7 @@ function Results({ results, openPopup }) {
     return (
       <section className="results-not-found">
         <h3>Sorry! We could not find this movie</h3>
-        <div
-          className="gif"
-          style={{ paddingTop: "54.000%", position: "relative" }}
-        >
+        <div className="gif">
           <iframe
             src="https://gifer.com/embed/v0K"
             width="100%"
