@@ -8,6 +8,7 @@ function Results({ results, openPopup }) {
         <h3>Sorry! We could not find this movie</h3>
         <div className="gif">
           <iframe
+            className="iframe"
             src="https://gifer.com/embed/v0K"
             width="100%"
             height="100%"
