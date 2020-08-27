@@ -1,6 +1,6 @@
 import React from "react";
 
-function informationBox() {
+function informationBox({ weather, dateBuilder }) {
   return (
     <div>
       <div className="location-box">
