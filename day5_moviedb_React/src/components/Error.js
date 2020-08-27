@@ -2,7 +2,7 @@ import React from "react";
 
 function Error() {
   return (
-    <div>
+    <div className="error">
       <h3>Sorry! We could not find this movie</h3>
       <div className="gif">
         <iframe
