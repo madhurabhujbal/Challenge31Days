@@ -97,6 +97,30 @@ section {
   position: relative;
 }
 
+.error h3 {
+  animation: appear 0.5s ease-out 1s;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+    font-size: 80px;
+    font-weight: 800px;
+  }
+  50% {
+    opacity: 1;
+    font-size: 50px;
+    font-weight: 500px;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    font-size: 30px;
+    font-weight: 300px;
+  }
+}
+
 .gif iframe.iframe {
   position: relative;
   align-items: center;
