@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Searchbox from "./components/Searchbox";
+import informationBox from "./components/informationBox";
 const api = {
   key: "446cc30bc37be1228e1d55b09335aeb6",
   base: "http://api.openweathermap.org/data/2.5/",
@@ -66,23 +67,7 @@ function App() {
     >
       <main>
         <Searchbox query={query} setQuery={setQuery} search={search} />
-        {typeof weather.main != "undefined" ? (
-          <div>
-            <div className="location-box">
-              <div className="location">
-                {" "}
-                {weather.name}, {weather.sys.country}{" "}
-              </div>
-              <div className="date">{dateBuilder(new Date())}</div>
-            </div>
-            <div className="weather-box">
-              <div className="temp">{Math.round(weather.main.temp)}°C</div>
-              <div className="weather"> {weather.weather[0].main} </div>
-            </div>
-          </div>
-        ) : (
-          ""
-        )}
+        {typeof weather.main != "undefined" ? <informationBox /> : ""}
       </main>
     </div>
   );
