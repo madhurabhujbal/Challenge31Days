@@ -65,7 +65,7 @@ function App() {
       }
     >
       <main>
-        <Searchbox />
+        <Searchbox query={query} setQuery={setQuery} search={search} />
         {typeof weather.main != "undefined" ? (
           <div>
             <div className="location-box">
