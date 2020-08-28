@@ -1,6 +1,7 @@
 import React from "react";
+import DateBuilder from "./DateBuilder";
 
-function InformationBox({ weather, dateBuilder }) {
+function InformationBox({ weather }) {
   if (weather.main !== undefined) {
     return (
       <div>
@@ -9,7 +10,7 @@ function InformationBox({ weather, dateBuilder }) {
             {" "}
             {weather.name}, {weather.sys.country}{" "}
           </div>
-          <div className="date">{dateBuilder(new Date())}</div>
+          <div className="date">{DateBuilder(new Date())}</div>
         </div>
         <div className="weather-box">
           <div className="temp">{Math.round(weather.main.temp)}°C</div>
