@@ -31,4 +31,4 @@ function DateBuilder(d) {
   return `${day} ${date} ${month} ${year}`;
 }
 
-export { DateBuilder };
+export default DateBuilder;
