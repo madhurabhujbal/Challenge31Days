@@ -1,5 +1,5 @@
 import React from "react";
-import { DateBuilder } from "./DateBuilder";
+import DateBuilder from "./DateBuilder";
 
 function InformationBox({ weather }) {
   if (weather.main !== undefined) {
