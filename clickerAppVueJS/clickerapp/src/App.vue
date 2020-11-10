@@ -1,14 +1,16 @@
 <template>
-<h2> {{ title }} </h2>
+<h2> {{ count }} </h2>
 </template>
 
 <script>
+import {ref} from 'vue';
 export default{
-  setup() {
-    let title = "Hello Madhura";
 
+
+  setup() {
+    const count = ref(0);
     return {
-      title
+      count
     }
   }
 }
