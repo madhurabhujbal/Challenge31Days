@@ -1,27 +1,29 @@
 <template>
   <div> <!-- Will give an error if code is not wrapped in div as vue3 allows only one element in template tag -->
-    <h2> {{ count }} </h2>
+    <h2> {{ state.count }} </h2>
     <button @click="updateCount(true)">Increase</button>
     <button @click="updateCount(false)">Decrease</button>
   </div>
 </template>
 
 <script>
-import {ref} from 'vue';
+import {reactive} from 'vue';
 export default{
-
   setup() {
-    const count = ref(0);
+    const state = reactive({
+      count: 0
+    });
+
     function updateCount(increase) {
       if(increase)
-      count.value++;
+      state.count++;
 
       else
-      count.value--;
+      state.count--;
     }
 
     return {
-      count,
+      state,
       updateCount
     }
   }
