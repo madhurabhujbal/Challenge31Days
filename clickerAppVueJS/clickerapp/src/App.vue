@@ -1,9 +1,17 @@
 <template>
-<h2>Hello world!!!</h2>
+<h2> {{ title }} </h2>
 </template>
 
 <script>
+export default{
+  setup() {
+    let title = "Hello Madhura";
 
+    return {
+      title
+    }
+  }
+}
 
 </script>
 
