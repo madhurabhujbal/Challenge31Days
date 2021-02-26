@@ -1,8 +1,8 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0em;
+  padding: 10px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,8 +11,8 @@ body {
 
 button {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   outline: none;
   background: none;
@@ -23,8 +23,8 @@ button {
   display: inline-block;
   padding: 15px 25px;
   font-size: 20px;
-  color: #FFF;
-  background-color: #22A484;
+  color: #fff;
+  background-color: #22a484;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
